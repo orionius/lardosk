@@ -1,0 +1,43 @@
+.block_left {
+  height: 100vh;
+  width: 300px;
+  font-family: "arial";
+  font-style: normal;
+  background-color: #7a9292;
+  border: 0px solid black;
+  float: left;
+}
+
+.block_right {
+  position: inherit;
+  max-width: inherit;
+  height: 100vh;
+  background: #d1eae5;
+}
+
+.block_right {
+  position: inherit;
+  max-width: inherit;
+  height: 100vh;
+  background: #d1eae5;
+}
+
+a {
+  color: white;
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.block_right {
+  position: inherit;
+  max-width: inherit;
+  height: 100vh;
+  background: #d1eae5;
+}
+
+.images_add_advert {
+  position: inherit;
+  max-width: 250px;
+  height: 200px;
+}
+
