@@ -3,22 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-
     <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}"/>
 </head>
 
 @extends('layouts.app')
-
 @section('content')
-
-
-
-
-
-
-
-
-
     <div class="container-fluid ">
         <div class="row">
             <div class="col-sm">
@@ -203,23 +192,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @endsection
