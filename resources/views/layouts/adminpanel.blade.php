@@ -4,7 +4,7 @@
 @section('left_panel')
     <body>
 
-    <div class="block_left" ><br>
+    <div class="block_left"><br>
 
         <a class="dropdown-item" href='{{ url("home") }}'">
         <h2> {{ __('Пользовательская часть') }}</h2>
@@ -12,11 +12,11 @@
 
         <a class="dropdown-item" href='{{ url("home") }}'">
         <h2>  {{ __('Список обьявлений  ') }} </h2>
-            </a><br>
+        </a><br>
 
         <a class="dropdown-item" href='{{ route("postadmin.new") }}'">
         <h2> {{ __('Добавить новое обьявление ') }} </h2>
-            </a><br>
+        </a><br>
 
 
         <div style="position:absolute;bottom:10%;width:100%">
@@ -37,12 +37,10 @@
 
     @yield('test')
     @section('admin_block')
-<div class="block_right">
+        <div class="block_right">
 
 
-
-
-</div>
+        </div>
 
     @show
     </body>
