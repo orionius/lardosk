@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-</head>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}"/>
+</head>
 
 @extends('layouts.app')
 
@@ -13,38 +14,7 @@
 
 
 
-    <style>
 
-        .stream {
-            width: 400px;
-            height: 200px !important;
-            margin: 3px;
-
-        }
-
-
-        img {
-            display: block;
-            height: auto;
-            height: 300px !important;
-            max-width: 100%;
-
-        }
-
-        .container {
-            padding-left: 0px;
-            padding-right: 0px;
-            width: 100%;
-            border: 2em;
-
-        }
-
-        .carousel-inner {
-            border-radius: 20px;
-
-
-        }
-    </style>
 
 
 

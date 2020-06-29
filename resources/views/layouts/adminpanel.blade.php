@@ -1,7 +1,5 @@
 @include('layouts.header')
-
-
-<link rel="stylesheet" type="text/css" href="{{ asset('css/admin_panel.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}"/>
 
 @section('left_panel')
     <body>
