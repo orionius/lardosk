@@ -10,12 +10,21 @@ use App\Images;
 use App\Advent;
 use Carbon\Carbon;
 
+
+// Обьявления
+class advents
+{
+    public function all()
+    {
+        return Advent::all();
+    }
+}
+
 class AdminController extends Controller
 {
 
     public function submitNewPost(request $req)
     {
-
         $nameuser = Auth::user()->name;
         $user = Auth::user()->id;
 
@@ -24,15 +33,15 @@ class AdminController extends Controller
             $advent->iduser = $user;
             $advent->visible = 1;
             $advent->date_delete = Carbon::now();
-            $advent->name = $nameuser ;
-            $advent->topic_name=$req->topic_name;
+            $advent->name = $nameuser;
+            $advent->topic_name = $req->topic_name;
             $advent->description = $req->description;
-
             $advent->save();
 
-           $ida_dvent = DB::table('advent')->where('iduser', '=', $user)->latest('id')->first();
+            $ida_dvent = DB::table('advent')->
+            where('iduser', '=', $user)->
+            latest('id')->first();
 
-            $id_advent=10;
             $photo_link = $req->file('image')->store('images', 'public');
             $images = new Images;
             $images->url = $photo_link;
@@ -40,7 +49,9 @@ class AdminController extends Controller
             $images->name;
             $images->save();
 
-            return view('admin_newpost');
+            $adv = new advents();
+
+            return view('admin_newpost', compact($adv->all()));
         }
     }
 
