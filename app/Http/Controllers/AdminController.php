@@ -25,17 +25,18 @@ class AdminController extends Controller
             $advent->visible = 1;
             $advent->date_delete = Carbon::now();
             $advent->name = $nameuser ;
+            $advent->topic_name=$req->topic_name;
+            $advent->description = $req->description;
+
             $advent->save();
 
+           $ida_dvent = DB::table('advent')->where('iduser', '=', $user)->latest('id')->first();
 
-       /*     $advent_user = Advent::where('iduser', '=', $user)->get();*/
-
-/*            $idadvent = DB::table('advent')->latest('id')->first();*/
-            $idadvent=10;
+            $id_advent=10;
             $photo_link = $req->file('image')->store('images', 'public');
             $images = new Images;
             $images->url = $photo_link;
-            $images->id_advent = $idadvent;
+            $images->id_advent = $ida_dvent->id;
             $images->name;
             $images->save();
 

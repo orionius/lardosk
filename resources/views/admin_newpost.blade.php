@@ -61,7 +61,7 @@ ghhhhhgggggggggggggggggggggggggggggggggggggggg
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Обьявление</label>
-                        <textarea class="form-control" name="comment" id="Textarea1" rows="3"></textarea>
+                        <textarea class="form-control" name="description" id="Textarea1" rows="3"></textarea>
                     </div>
 
 
