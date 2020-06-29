@@ -16,8 +16,9 @@ class CreateAdventTable extends Migration
         Schema::create('advent', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('iduser');
             $table->binary('visible')->comment('видимость');
-            $table->timestamp('date_delete')->comment('кода удалить');
+            $table->date('date_delete')->comment('кода удалить');
             $table->string('name')->comment('имя пользователя');
             $table->string('phone')->comment('телефон');
             $table->string('e_mail');

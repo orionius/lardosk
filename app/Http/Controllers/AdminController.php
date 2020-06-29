@@ -9,7 +9,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Images;
 
 
-
 class AdminController extends Controller
 {
 
@@ -17,12 +16,9 @@ class AdminController extends Controller
     {
         if (Auth::user()->isadmin()) {
             $photo_link = $req->file('image')->store('images', 'public');
-
             $images = new Images;
             $images->url = $photo_link;
-
             $images->save();
-
 
             return view('admin_newpost');
         }
