@@ -20,9 +20,9 @@ class CreateAdventTable extends Migration
             $table->binary('visible')->comment('видимость');
             $table->date('date_delete')->comment('кода удалить');
             $table->string('name')->comment('имя пользователя');
-            $table->string('phone')->comment('телефон');
-            $table->string('e_mail');
-            $table->integer('type_advent')->comment('тип обьявления');
+            $table->string('phone')->default(' ')->comment('телефон');
+            $table->string('e_mail')->default(' ');
+            $table->integer('type_advent')->default(0)->comment('тип обьявления');
             $table->integer('priority')->default(100)->comment('Приоритет 0 главный');
 
 
