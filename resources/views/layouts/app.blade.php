@@ -51,7 +51,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background-color: rgb(235, 16, 16);
+        background-color: rgb(232, 19, 19);
         content: "";
         transition: width 1s, height 1s, background-color 1s, transform 1s;
         white-space: nowrap;

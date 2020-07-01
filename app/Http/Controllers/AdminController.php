@@ -12,7 +12,7 @@ use Carbon\Carbon;
 
 
 // Обьявления
-class advents
+class Advents
 {
     public function all()
     {
@@ -23,8 +23,32 @@ class advents
 class AdminController extends Controller
 {
 
+
+    public function adventList($id)
+    {
+
+
+        if (Auth::user()->isadmin() )  {
+            $advents = new Advents;
+            if (isset($id) or $id <> 0 ) {
+
+            } else {
+                echo "asdasd";
+                $advents->all;
+
+                return view(compact($advents->all()));
+
+
+
+            }
+        }
+
+    }
+
+
     public function submitNewPost(request $req)
     {
+
         $nameuser = Auth::user()->name;
         $user = Auth::user()->id;
 
@@ -49,7 +73,7 @@ class AdminController extends Controller
             $images->name;
             $images->save();
 
-            $adv = new advents();
+            $adv = new Advents();
 
             return view('admin_newpost', compact($adv->all()));
         }

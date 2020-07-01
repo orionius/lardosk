@@ -24,11 +24,20 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/admin_adv_list', function () {
+    return view('admin_adv_list');
+});
+
+
 // Аdmin routes
 Route::get('admin_newpost', 'AdminController@newPost')->name('postadmin.new');
 Route::post('admin_newpost_subm', 'AdminController@submitNewPost')->name('postadmin.newsubm');
 Route::get('admin', 'AdminController@admin')->name('admin');
-Route::get('admin_newpost.blade.php/{id}', 'AdminController@admin')->name('read.post');
+Route::get('admin_adv_list/{id}', 'AdminController@adventList')->name('read.adv_all');
+
+
+
+
 
 
 
