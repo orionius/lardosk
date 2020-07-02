@@ -8,37 +8,28 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Images;
 use App\Advent;
-use Carbon\Carbon;
+use App\Http\AdventService;
 
+//use Carbon\Carbon;
 
-// Обьявления
-class Advents
-{
-    public function all()
-    {
-        return Advent::all();
-    }
-}
 
 class AdminController extends Controller
 {
+
 
 
     public function adventList($id)
     {
 
 
-        if (Auth::user()->isadmin() )  {
-            $advents = new Advents;
-            if (isset($id) or $id <> 0 ) {
+        if (Auth::user()->isadmin()) {
+
+            if (isset($id) and $id != 0) {
 
             } else {
-                echo "asdasd";
-                $advents->all;
-
-                return view(compact($advents->all()));
 
 
+             //   return view(compact($advents->all()));
 
             }
         }
