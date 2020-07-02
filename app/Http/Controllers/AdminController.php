@@ -17,23 +17,17 @@ class AdminController extends Controller
 {
 
 
-
     public function adventList($id)
     {
-
-
         if (Auth::user()->isadmin()) {
-
             if (isset($id) and $id != 0) {
-
+                $advents = collect([adventId($id)]);
+                return view('admin_adv_list', compact('advents'));
             } else {
-
-
-             //   return view(compact($advents->all()));
-
+                $advents = adventAll();
+                return view('admin_adv_list', compact('advents'));
             }
         }
-
     }
 
 

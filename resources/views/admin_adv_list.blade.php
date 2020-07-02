@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin_adv_list.css') }}"/>
+</head>
+
+
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin_panel.css') }}"/>
 </head>
 
@@ -15,7 +20,9 @@
         <th><p class='text-center'>Описание</p></th>
 
     </tr>
-    @foreach ( adventAll() as $advent)
+
+
+    @foreach ( $advents as $advent)
 
         <tr>
 

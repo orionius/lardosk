@@ -10,7 +10,7 @@
         <h2> {{ __('Пользовательская часть') }}</h2>
         </a><br>
 
-        <a class="dropdown-item" href='{{ route("read.adv_all",0) }}'">
+        <a class="dropdown-item" href='{{ route("read.adv_all",1) }}'">
         <h2>  {{ __('Список обьявлений  ') }} </h2>
         </a><br>
 
