@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin_panel.scss', 'public/css')
     .sass('resources/sass/home.scss', 'public/css')
-mix.copyDirectory('storage/images', 'public/images');
+    .sass('resources/sass/admin_adv_list.scss', 'public/css')
+/*mix.copyDirectory('storage/images', 'public/images');*/

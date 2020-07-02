@@ -1,7 +1,9 @@
 @include('layouts.header')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/admin_panel.css') }}"/>
 
 @section('left_panel')
+
+
     <body>
 
     <div class="block_left"><br>
@@ -10,7 +12,7 @@
         <h2> {{ __('Пользовательская часть') }}</h2>
         </a><br>
 
-        <a class="dropdown-item" href='{{ route("read.adv_all",1) }}'">
+        <a class="dropdown-item" href='{{ route("read.adv_all",0) }}'">
         <h2>  {{ __('Список обьявлений  ') }} </h2>
         </a><br>
 

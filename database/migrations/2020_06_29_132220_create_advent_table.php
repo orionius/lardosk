@@ -17,7 +17,7 @@ class CreateAdventTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('iduser');
-            $table->binary('visible')->comment('видимость');
+            $table->boolean('visible')->default(0)->comment('видимость');
             $table->date('date_delete')->comment('кода удалить');
             $table->string('topic_name',150)->default("Пусто");
             $table->text('description',150)->default("Пусто");

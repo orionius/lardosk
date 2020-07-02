@@ -13,7 +13,7 @@ function carbon($time = null, $tz = null)
 }
 function carbonFormatted($time = null, $tz = null)
 {
-    return carbon($time, $tz)->format('Y-m-d');
+    return carbon($time, $tz)->format('d-m-Y');
 }
 
 

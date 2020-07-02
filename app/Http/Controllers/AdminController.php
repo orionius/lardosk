@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Images;
 use App\Advent;
+
 use App\Http\AdventService;
 
-//use Carbon\Carbon;
+use Carbon\Carbon;
 
 
 class AdminController extends Controller
@@ -58,9 +59,9 @@ class AdminController extends Controller
             $images->name;
             $images->save();
 
-            $adv = new Advents();
+            $adv = adventAll();
 
-            return view('admin_newpost', compact($adv->all()));
+            return view('admin_newpost', compact('adv'));
         }
     }
 

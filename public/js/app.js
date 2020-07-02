@@ -49821,6 +49821,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/admin_adv_list.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/admin_adv_list.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/admin_panel.scss":
 /*!*****************************************!*\
   !*** ./resources/sass/admin_panel.scss ***!
@@ -49855,16 +49866,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin_panel.scss ./resources/sass/home.scss ***!
-  \**************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin_panel.scss ./resources/sass/home.scss ./resources/sass/admin_adv_list.scss ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\openserv\OSPanel\domains\lardosk\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! D:\openserv\OSPanel\domains\lardosk\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! D:\openserv\OSPanel\domains\lardosk\resources\sass\admin_panel.scss */"./resources/sass/admin_panel.scss");
-module.exports = __webpack_require__(/*! D:\openserv\OSPanel\domains\lardosk\resources\sass\home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! D:\openserv\OSPanel\domains\lardosk\resources\sass\home.scss */"./resources/sass/home.scss");
+module.exports = __webpack_require__(/*! D:\openserv\OSPanel\domains\lardosk\resources\sass\admin_adv_list.scss */"./resources/sass/admin_adv_list.scss");
 
 
 /***/ })

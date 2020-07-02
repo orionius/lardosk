@@ -1,0 +1,26 @@
+th {
+  background-color: #636b6f;
+}
+
+TABLE {
+  width: 300px;
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+TD,
+TH {
+  padding: 3px;
+}
+
+TH {
+  text-align: left;
+  background: #b9bdc0;
+  color: white;
+  border: 1px solid white;
+}
+
+TD {
+  border-bottom: 1px solid black;
+}
+
