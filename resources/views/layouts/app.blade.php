@@ -9,15 +9,12 @@
     <title>Доска обьявлений</title>
 
     <!-- Подключаем BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -33,50 +30,11 @@
 
 <style>
 
+    .dropdown-menu , .nav-link {
+        font-size: 20px;
 
-    spans {
-        position: relative;
-        color: #240e2e;
-        cursor: pointer;
-        line-height: 1;
-        text-decoration: none;
-        font-family: "Monotype Corsiva" Cursive;
-        font-size: 18px;
-        white-space: nowrap;
     }
 
-    spans:after {
-        display: block;
-        position: absolute;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: rgb(232, 19, 19);
-        content: "";
-        transition: width 1s, height 1s, background-color 1s, transform 1s;
-        white-space: nowrap;
-    }
-
-    spans:hover:after,
-    spans:focus:after {
-        width: 100%;
-        background-color: rgb(0, 255, 0);
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-        white-space: nowrap;
-    }
-
-    .transition_disabled {
-        -webkit-transition: none !important;
-        -moz-transition: none !important;
-        -ms-transition: none !important;
-        -o-transition: none !important;
-    }
-
-
-    a {
-        text-decoration: none;
-    }
 </style>
 
 
@@ -125,7 +83,7 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

@@ -9,61 +9,7 @@
 </head>
 
 <style>
-    /*
-        #table {
-            position:inherit;
-    top : 100px;
-    background: #dbdfdc;
-        }
-    */
 
-    .row-flex, .row-flex > div[class*='col-'] {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex: 1 1 auto;
-    }
-
-    .row-flex-wrap {
-        -webkit-flex-flow: row wrap;
-        align-content: flex-start;
-        flex: 0;
-    }
-
-    .row-flex > div[class*='col-'] {
-        margin: -.2px;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    .visible_width {
-        width: 10px;
-        text-align: center;
-    }
-
-    .id_width {
-        width: 10px;
-        text-align: center;
-    }
-
-    .date_width {
-        width: 20px;
-        text-align: center;
-    }
-
-    .topic_width {
-        width: 50px;
-        text-align: center;
-    }
-
-    .describe_width {
-        width: 100px;
-        text-align: center;
-    }
 </style>
 
 
@@ -134,6 +80,10 @@
                         @endforeach
 
                     </table>
+
+                    <button type="button" class="btn btn-primary">Отправить</button>
+
+
                 </div>
             </div>
 

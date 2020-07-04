@@ -16,10 +16,12 @@ use Carbon\Carbon;
 
 class AdminController extends Controller
 {
-
+private $alll;
 
     public function adventList($id)
     {
+        $this->alll = "Привет";
+
         if (Auth::user()->isadmin()) {
             if (isset($id) and $id != 0) {
                 $advents = collect([adventId($id)]);
