@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+class AjaxController extends Controller {
+
+    public function store(Request $request)
+    {
+
+        $msg = "This is a simple message.";
+
+        dd($request);
+        return response()->json(array('msg'=> $msg), 200);
+
+    }
+}
+
+
+

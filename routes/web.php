@@ -28,12 +28,25 @@ Route::get('/admin_adv_list', function () {
     return view('admin_adv_list');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+
 
 // Аdmin routes
 Route::get('admin_newpost', 'AdminController@newPost')->name('postadmin.new');
 Route::post('admin_newpost_subm', 'AdminController@submitNewPost')->name('postadmin.newsubm');
 Route::get('admin', 'AdminController@admin')->name('admin');
 Route::get('admin_adv_list/{id}', 'AdminController@adventList')->name('read.adv_all');
+
+
+// ajax
+Route::get('/message', function () {
+    return view('message');
+});
+Route::post('/chekbox','AjaxController@chekbox')->name('chekbox');
+Route::post('/ajax','AjaxController@store');
 
 
 

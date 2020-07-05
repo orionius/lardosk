@@ -44,8 +44,8 @@
         <div class="container">
             <a href="http://www.tdmouse.ru">
                 <spans> О нас</spans>
-            </a> &#160 &#160 &#160 <a href="http://www.tdmouse.ru">
-                <spans> Свяжитесь с нами</spans>
+            </a> &#160 &#160 &#160 <a href="{{ url('contact') }}">
+                <spans> Контакт </spans>
             </a>
 
             {{--           <a class="navbar-brand" href="{{ url('/') }}">

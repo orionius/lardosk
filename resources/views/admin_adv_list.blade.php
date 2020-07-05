@@ -63,19 +63,23 @@
                             <tr>
                                 <td class="visible_width">
                                     @if (  $advent->visible )
-                                        <p><input type="checkbox" name="checkbox" title="Отобразить - скрыть обьявление " value="" checked></p>
-                                        @else
-                                    <p><input type="checkbox" title="Отобразить - скрыть обьявление " name="checkbox" value=""></p>
+                                        <p><input class='chekboxx' type="checkbox" name="checkbox"
+                                                  title="Отобразить - скрыть обьявление " value="1" checked></p>
+                                    @else
+                                        <p><input class='chekboxx' type="checkbox"
+                                                  title="Отобразить - скрыть обьявление "
+                                                  name="checkbox" value="0"></p>
 
                                 @endif
 
 
-                                <td class="id_width" title="Порядковый номер " > {{ $advent->id }}
+                                <td class="id_width" title="Порядковый номер "> {{ $advent->id }}
 
 
-                                <td class="date_width" title="Дата создания " > {{  carbonFormatted($advent->created_at,'Europe/Moscow')   }}
-                                <td class="topic_width" title="Название обьявления " > {{ $advent->topic_name }}
-                                <td class="describe_width" title="Текст Обьявления " > {{ $advent->description }}
+                                <td class="date_width"
+                                    title="Дата создания "> {{  carbonFormatted($advent->created_at,'Europe/Moscow')   }}
+                                <td class="topic_width" title="Название обьявления "> {{ $advent->topic_name }}
+                                <td class="describe_width" title="Текст Обьявления "> {{ $advent->description }}
                             </tr>
                         @endforeach
 
@@ -89,6 +93,44 @@
 
 
         </div>
+
+        <script type="text/javascript">
+
+
+            $(document).ready(function () {
+
+                var checkboxes = Array.from(document.querySelectorAll('.chekboxx'));
+                checkboxes.forEach(function (checkbox, i) {
+
+
+                    //     $("input:checkbox").click(function () { index := wb.document.getElementByID("chekboxx").sourceIndex
+                    //            var chkVal = $(this).attr("value");
+
+                    var chekAray = [];
+                    var chek = $('.chekboxx').eq(i).val();
+                    chekAray.push(chek);
+
+
+
+                    $.ajax({
+                        url: '/ajax',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            "_token": "{{ csrf_token() }}"
+                        },
+                        success: function (data) {
+                                       alert(data.msg);
+                        },
+                        error: function (data) {
+
+                        }
+                    });
+                    //     });
+                });
+
+            });
+        </script>
 
 
 @endsection
