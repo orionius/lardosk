@@ -53,7 +53,7 @@
                     <label for="message">Сообщение:</label>
                     <textarea class="form-control" name="message" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-info">Отправить сообщение</button>
+                <button type="submit" name = "Register" class="btn btn-info">Отправить сообщение</button>
             </form>
         </div>
         <div class="col-md-4"></div>

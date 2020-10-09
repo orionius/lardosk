@@ -99,17 +99,38 @@
 
             $(document).ready(function () {
 
-                var checkboxes = Array.from(document.querySelectorAll('.chekboxx'));
-                checkboxes.forEach(function (checkbox, i) {
+
+                $(".chekboxx").change(function () {
+                    var chekboxAray = [];
 
 
-                    //     $("input:checkbox").click(function () { index := wb.document.getElementByID("chekboxx").sourceIndex
-                    //            var chkVal = $(this).attr("value");
+                    $(".chekboxx").each(function (i) {
 
-                    var chekAray = [];
-                    var chek = $('.chekboxx').eq(i).val();
-                    chekAray.push(chek);
 
+                        var chek = $('.chekboxx').eq(i).prop('checked');
+
+                      //  if (chek  ) {chek *= 1 ;} else  {chek *= 0; }
+
+                        chekboxAray.push([chek]);
+                     //   alert(chekboxAray[i]); // передать
+                    });
+
+
+                 //  chekboxAray.forEach(element => alert(element));// передать
+
+
+                    /*
+                    var checkboxes = Array.from(document.querySelectorAll('.chekboxx'));
+                    checkboxes.forEach(function (checkbox, i) {
+
+
+                        //     $("input:checkbox").click(function () { index := wb.document.getElementByID("chekboxx").sourceIndex
+                        //            var chkVal = $(this).attr("value");
+
+                        var chekAray = [];
+                        var chek = $('.chekboxx').eq(i).val();
+                        chekAray.push(chek);
+    */
 
 
                     $.ajax({
@@ -117,10 +138,12 @@
                         type: 'post',
                         dataType: 'json',
                         data: {
-                            "_token": "{{ csrf_token() }}"
+                            "_token": "{{ csrf_token() }}",
+                            chekboxAray: chekboxAray   ,
                         },
                         success: function (data) {
-                                       alert(data.msg);
+                            alert(data.msg);
+
                         },
                         error: function (data) {
 
